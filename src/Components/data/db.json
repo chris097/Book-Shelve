@@ -1,0 +1,26 @@
+{
+    "books": [
+      {
+        "title": "Frontend developer",
+        "author": "Christian Chiemela",
+        "bookUrl": "https://guardian.ng/wp-content/uploads/2018/08/Elantra-pix.jpg",
+        "isPublished": "1995",
+        "ISBN": "09827h72",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti alias optio cum illum inventore magnam vitae corrupti quisquam iusto a, animi voluptatem aspernatur. Sed quis unde eum, temporibus obcaecati nam. Ad voluptatem deleniti repellendus eveniet, tenetur voluptatibus pariatur, quaerat cum tempora molestias dolores quam voluptate laudantium distinctio provident minus suscipit possimus. Saepe nulla architecto non commodi quis dicta nesciunt porro!",
+        "_id": 1
+      },
+      {
+        "title": "Home Ground",
+        "author": "book master",
+        "bookUrl": "https://chris097.github.io/christian-chiemela/#projects",
+        "isPublished": "1995",
+        "ISBN": "09827h72",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti alias optio cum illum inventore magnam vitae corrupti quisquam iusto a, animi voluptatem aspernatur. Sed quis unde eum, temporibus obcaecati nam. Ad voluptatem deleniti repellendus eveniet, tenetur voluptatibus pariatur, quaerat cum tempora molestias dolores quam voluptate laudantium distinctio provident minus suscipit possimus. Saepe nulla architecto non commodi quis dicta nesciunt porro!",
+        "_id": 2
+      }
+    ],
+    "comments": [],
+    "profile": {
+      "name": "Jane Smith"
+    }
+  }
