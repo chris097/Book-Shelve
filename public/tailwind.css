@@ -31311,8 +31311,26 @@ video {
   border-width: 1px;
   outline: 2px solid transparent;
   outline-offset: 2px;
-  padding: 0.25rem;
-  width: 100%
+  padding: 0.25rem
+}
+
+.input-box::-webkit-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(209, 213, 219, var(--tw-placeholder-opacity));
+}
+
+.input-box:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(209, 213, 219, var(--tw-placeholder-opacity));
+}
+
+.input-box::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(209, 213, 219, var(--tw-placeholder-opacity));
+}
+
+.input-box {
+  width: 100%;
 }
 
 @media (min-width: 640px) {
