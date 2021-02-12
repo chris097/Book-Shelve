@@ -2,7 +2,7 @@ import React  from "react";
 
 export const Sidebar = () => {
     return(
-        <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36">
+        <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36 font-rubik">
             <div className="mt-2 px-10">
                 A curated list of every book ever written
             </div>

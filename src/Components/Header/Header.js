@@ -5,7 +5,7 @@ export const Header = ({ getBookModal, book }) => {
     return(
         <>
             <div className="px-10 bg-white shadow-sm flex self-stretch h-20 py-4 fixed w-full">
-                <div className="text-2xl pt-2">LiberShelter</div>
+                <div className="text-2xl pt-2 font-lobster">LiberShelter</div>
                 
                 <div className="w-4/5 bg-gray-50 mx-20 rounded-full px-4">
                     <span><svg className="w-6 inline text-gray-200 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -20,7 +20,7 @@ export const Header = ({ getBookModal, book }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 </span>
-                <div className="text-white">Add Book</div>
+                <div className="text-white font-rubik">Add Book</div>
                 </button>
                
             </div>

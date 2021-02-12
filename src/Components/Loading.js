@@ -18,7 +18,7 @@ export const Load = () => {
 }
 
 export const Loading = () => {
-    const [ loading, setLoading ] = useState(<Lib />)
+    const [ loading, setLoading ] = useState(<Sketch />)
 
     setTimeout(() => {
         setLoading(<Sketch />)
