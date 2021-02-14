@@ -24,7 +24,7 @@ export default function App() {
             if(book){
                 setTimeout(() => {
                     setWeb(<Banner getBookModal={getBookModal} book={book} />)
-                }, 5000);
+                }, 1000);
             }
             if(book.length === 0){
                 setNoData(<Nodata />)

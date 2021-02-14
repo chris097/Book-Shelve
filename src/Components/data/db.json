@@ -1,35 +1,5 @@
 {
-  "books": [
-    {
-      "title": "Frontend developer",
-      "author": "Christian Chiemela",
-      "bookUrl": "https://guardian.ng/wp-content/uploads/2018/08/Elantra-pix.jpg",
-      "isPublished": "1995",
-      "imageUrl": "https://guardian.ng/wp-content",
-      "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti alias optio cum illum inventore magnam vitae corrupti quisquam iusto a, animi voluptatem aspernatur. Sed quis unde eum, temporibus obcaecati nam. Ad voluptatem deleniti repellendus eveniet, tenetur voluptatibus pariatur, quaerat cum tempora molestias dolores quam voluptate laudantium distinctio provident minus suscipit possimus. Saepe nulla architecto non commodi quis dicta nesciunt porro!",
-      "id": 1
-    },
-    {
-      "title": "Home Ground",
-      "author": "book master",
-      "bookUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.whatyouwilllearn.com%2Fbook%2Femotional-intelligence%2F&psig=AOvVaw3_CCQ35jZ4Nb297RTLeev1&ust=1607061164591000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjKwMKPse0CFQAAAAAdAAAAABAK",
-      "publish": "12388",
-      "isPublished": "klop",
-      "imageUrl": "https://www.helloworld.com",
-      "description": "ooo",
-      "id": 2
-    },
-    {
-      "title": "Frontend developer",
-      "author": "Christian Chiemela",
-      "bookUrl": "https://chris097.github.io/christian-chiemela/#projects",
-      "publish": "3",
-      "isPublished": "klop",
-      "imageUrl": "https://www.helloworld.com",
-      "description": "gggg",
-      "id": 3
-    }
-  ],
+  "books": [],
   "comments": [],
   "profile": {
     "name": "Jane Smith"

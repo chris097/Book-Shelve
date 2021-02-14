@@ -4,12 +4,12 @@ import { Sidebar } from "../Channels/Sidebar";
 import { Header } from "../Header/Header";
 
 
-export const Banner = ({getBookModal, book, getBookId }) => {
+export const Banner = ({getBookModal, book, getBookId, removeBookId }) => {
     return(
         <div className="flex">
             <Header getBookModal={getBookModal} book={book} />
             <Sidebar />
-            <MainWrapper book={book} getBookModal={getBookModal} getBookId={getBookId} />
+            <MainWrapper book={book} getBookModal={getBookModal} getBookId={getBookId} removeBookId={removeBookId} />
         </div>
     )
 }

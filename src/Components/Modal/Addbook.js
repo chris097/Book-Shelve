@@ -11,8 +11,7 @@ export const Addbook = ({ removeBookmodal }) => {
         publish: [],
         isPublished: [],
         imageUrl: [],
-        description: [],
-        id: []
+        description: []
     })
 
     const onSubmitHandler = e => {
