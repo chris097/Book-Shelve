@@ -9,7 +9,7 @@ export const Banner = ({getBookModal, book, getBookId, removeBookId }) => {
         <div className="flex">
             <Header getBookModal={getBookModal} book={book} />
             <Sidebar />
-            <MainWrapper book={book} getBookModal={getBookModal} getBookId={getBookId} removeBookId={removeBookId} />
+            <MainWrapper book={book} getBookModal={getBookModal} getBookId={getBookId} removeBookId={removeBookId}  />
         </div>
     )
 }

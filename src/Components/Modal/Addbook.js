@@ -13,7 +13,7 @@ export const Addbook = ({ removeBookmodal }) => {
         imageUrl: [],
         description: []
     })
-
+    // Post- add a book to the database
     const onSubmitHandler = e => {
         axios.post(baseUrl, postData)
         .then(res => {
@@ -76,8 +76,7 @@ export const Addbook = ({ removeBookmodal }) => {
                             <button className="w-full bg-primaryColor my-2 rounded-sm p-2 text-white hover:bg-blue-700 transition-all delay-200 ease-in-out" type="submit">Add</button>
                         </form>
                     </div>
-                </div>
-              
+                </div>          
         </>
     )
 }

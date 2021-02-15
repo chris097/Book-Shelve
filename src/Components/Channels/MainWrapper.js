@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import img1 from "../../Images/img-1.svg";
 import img2 from "../../Icons/love-icon.svg";
 import img3 from "../../Icons/comment-icon.svg";
-import { Details } from "../Modal/Details";
+import { BookDetails } from "../Modal/Details";
 import axios from "axios";
 import { baseUrl } from "../../App";
 import { DeleteDetails } from "../Modal/Delete";
+import { EditBook } from "../Modal/Edit";
 
 
 export const MainWrapper = ({ book }) => {
     const [ getBookDetails, setBookDetails ] = useState([])
     const [ data, setData ] = useState([]);
     const [ deleteDetails, setDeleteDetails ] = useState([])
+    const [ editBook, setEditBook ] = useState([])
 
     function getId (id){
         id = book.map(books => (
@@ -22,7 +24,18 @@ export const MainWrapper = ({ book }) => {
     }
     const id = getId()
 
+    // use remove button x to exit modal
+    const removeEditBookmodal = () => {
+        setEditBook('')
+    }
 
+    // EventHandler- edit book modal
+    const editBookDetails =() => {
+        setEditBook(<EditBook removeEditBookmodal={removeEditBookmodal} book={book} />)
+        setDeleteDetails('')
+        setBookDetails('')
+
+    }
 
     // Remove book details modal
     function removeBookDetails() {
@@ -33,7 +46,7 @@ export const MainWrapper = ({ book }) => {
         setDeleteDetails(<DeleteDetails cancelDetails={cancelDetails} removeBookId={removeBookId} />)
         setBookDetails('')
     }
-
+    // Delete- To delete a book from the database
     const removeBookId = async() => {
         console.log('A book was delete ...')
         setDeleteDetails('')
@@ -41,25 +54,28 @@ export const MainWrapper = ({ book }) => {
         .then(res => console.log(res.data))
     }
 
+    // Cancel Button decided not continue operation
     const cancelDetails = () => {
         console.log('something was clicked...')
         setDeleteDetails('')
     }
-
+ 
+    // Get:ID look for a particular book in the database
     const getBookId = (id) => {
         axios.get(`${baseUrl}/${id}`)
         .then(res => {
             const result = res.data
             setData(result)
             console.log(result);
-        })
+    })
         
-        setBookDetails(<Details 
+         return setBookDetails(<BookDetails 
                 id={data.id} 
                 title={data.title} 
                 author={data.author}
                 removeBookDetails={removeBookDetails} 
                 deleteDetailsModal={deleteDetailsModal}
+                editBookDetails={editBookDetails}
             />)
     }
 
@@ -68,9 +84,9 @@ export const MainWrapper = ({ book }) => {
             <div className="overflow-y-auto h-screen w-screen overflow-x-hidden font-rubik-400">
             { getBookDetails }
             { deleteDetails }
+            { editBook }
                     <div className="mx-72 mt-44 rounded-full flex flex-wrap w-4/5 justify-items-start">
                         { book.map(books => (
-                            <>
                             <div className="card cursor-pointer" key={books.id} onClick={() => getBookId(`${books.id}`)}>
                                 <div className="bg-gray-200 w-full rounded-tr-lg rounded-tl-lg">
                                     <img className="w-full h-52" src={img1} alt=""/>
@@ -90,7 +106,6 @@ export const MainWrapper = ({ book }) => {
                                     </div>
                                 </div>
                             </div>
-                            </>
                         ))}
                     </div>
                 </div>

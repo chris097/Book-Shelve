@@ -7,7 +7,6 @@ import { Loading } from './Components/Loading';
 import { Nodata } from './Components/errors/Nodata';
 
 
-
 export let baseUrl = "http://localhost:3004/books";
 
 export default function App() {
@@ -49,7 +48,7 @@ export default function App() {
 
     return (
         <div>
-            { web  }
+            { web }
             { noData }
             { getModal }
         </div>

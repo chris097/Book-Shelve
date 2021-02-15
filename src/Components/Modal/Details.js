@@ -2,7 +2,7 @@ import React from 'react';
 import img1  from '../../Images/img-1.svg';
 
 
-export const Details = ({ removeBookDetails, title=null, author=null, deleteDetailsModal}) => {
+export const BookDetails = ({ removeBookDetails, title, author, deleteDetailsModal, editBookDetails}) => {
 
     return(
         <>
@@ -39,7 +39,7 @@ export const Details = ({ removeBookDetails, title=null, author=null, deleteDeta
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-5.586z" />
                             </svg></div>
                             <div className="flex">
-                                <svg className="w-6 text-gray-300 mr-7 hover:bg-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg onClick={editBookDetails} className="w-6 text-gray-300 mr-7 hover:bg-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-5.586z" />
                                 </svg>
                                 <svg onClick={deleteDetailsModal} className="w-6 text-gray-300 hover:bg-gray-200 shadow-2xl hover:text-red-500 rounded-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
