@@ -8,16 +8,16 @@ export const BookDetails = ({ removeBookDetails, title, author, deleteDetailsMod
         <>
         <div className="fixed w-screen h-screen bg-gray-900 left-0 top-0 opacity-40 transition ease-in-out delay-1000"></div>
         <div className="self-center justify-center flex font-rubik-400 font-medium">
-            <div className="absolute top-1 bg-white shadow-2xl w-1/2 h-auto z-50 transition-transform m-auto overflow-hidden rounded-md ">
-                <div className="flex justify-between px-3 py-2">
+            <div className="absolute top-1 bg-white shadow-2xl xsm:w-1/2 mx-2 h-auto z-50 transition-transform m-auto overflow-hidden rounded-md ">
+                <div className="flex justify-between xsm:px-3 py-2">
                     <div className="ml-4">{title}</div>
                     <div onClick={removeBookDetails} className=""><svg className="w-5 mr-3 text-gray-500 hover:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg></div>
                 </div>
 
-                <div className="px-8 mt-2 flex">
-                    <div className="flex-1">
+                <div className="xsm:px-8 mt-2 flex px-3">
+                    <div className="flex-1 overflow-x-visible h-auto w-32 flex-nowrap">
                         <img className="w-full pr-8 h-70" src={img1} alt="book_image"/>
                         <div className="mt-5">
                             <div className="mb-3">Author: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">{author}</span></div>
@@ -34,7 +34,7 @@ export const BookDetails = ({ removeBookDetails, title, author, deleteDetailsMod
                             laborum molestiae, fugit odio error rem, atque, eveniet voluptatibus quo omnis amet soluta!
                         </div>
 
-                        <div className="flex justify-between">
+                        <div className="flex justify-between mt-4">
                             <div><svg className="w-6 text-gray-300 hover:bg-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-5.586z" />
                             </svg></div>
@@ -50,7 +50,7 @@ export const BookDetails = ({ removeBookDetails, title, author, deleteDetailsMod
                     </div>
                 </div>
 
-                <div className="px-8 mt-2">
+                <div className="xsm:px-8 px-3 mt-2">
                     <div>32 comments</div>
                     <div className="flex my-3">
                         <svg className="w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

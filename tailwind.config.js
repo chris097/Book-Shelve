@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         rubik: [ 'Rubik', 'sans-serif' ],
         lobster: ['Lobster Two', 'cursive' ]
+      },
+      screens: {
+        xsm: '375px'
       }
     },
   },

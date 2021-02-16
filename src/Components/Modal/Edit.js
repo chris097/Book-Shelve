@@ -1,24 +1,29 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import {baseUrl} from '../../App'
 
-export const EditBook = ({ removeEditBookmodal, onSubmitHandler, book, onEditBook}) => {
-    // const [ b, c] = useState({
-    //     title: book.title
-    // })
-    let check;
-function toEditBook(){
-    book.map(res => (
-        check= res
-    ))
-
-    return check;
-}
-let books = toEditBook()
+export const EditBook = ({ removeEditBookmodal, book }) => {
+    let check, books, id;
+    function toEditBook(){
+        book.map(res => check = res );
+        return check;
+    }
+   books = toEditBook();
+   id = books.id;
 const [ edit, setEdit] = useState({
     title: books.title,
     author: books.author,
     publish: books.publish
 })
-// console.log(go.title)
+
+
+const onSubmitHandler = () =>{
+    axios.put(`${baseUrl}/${id}`, edit)
+    .then((res) => {
+        edit.title = res.data.title
+    })
+}
+
 
     return(
         <>

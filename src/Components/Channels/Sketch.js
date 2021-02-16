@@ -6,9 +6,7 @@ export const Sketch = () => {
     return(
         <>
         <div className="px-10 bg-white shadow-sm flex self-stretch h-20 py-4 fixed w-full animate-pulse">
-        <div className="text-lg bg-gray-50 px-2 rounded-full h-10 mt-1 w-44">
-        <div className="bg-white h-4 w-full mt-3 rounded-full"></div>
-        </div>
+        <div className="text-2xl pt-2 font-lobster text-gray-400">LiberShelter</div>
                 
                 <div className="w-4/5 bg-gray-50 mx-20 rounded-full px-4">
                     <span><svg className="w-6 inline text-gray-200 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

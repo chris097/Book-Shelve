@@ -1,16 +1,5 @@
 {
-  "books": [
-    {
-      "title": "Frontend developer",
-      "author": "Christian Chiemela",
-      "bookUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.whatyouwilllearn.com%2Fbook%2Femotional-intelligence%2F&psig=AOvVaw3_CCQ35jZ4Nb297RTLeev1&ust=1607061164591000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjKwMKPse0CFQAAAAAdAAAAABAK",
-      "publish": "7",
-      "isPublished": "1995",
-      "imageUrl": "9",
-      "description": "8",
-      "id": 1
-    }
-  ],
+  "books": [],
   "comments": [],
   "profile": {
     "name": "Jane Smith"
