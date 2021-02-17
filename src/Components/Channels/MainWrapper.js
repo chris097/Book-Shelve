@@ -47,10 +47,10 @@ export const MainWrapper = ({ book }) => {
         setBookDetails('')
     }
     // Delete- To delete a book from the database
-    const removeBookId = async() => {
+    const removeBookId = () => {
         console.log('A book was delete ...')
         setDeleteDetails('')
-        await axios.delete(`${baseUrl}/${id}`)
+        axios.delete(`${baseUrl}/${id}`)
         .then(res => console.log(res.data))
     }
 

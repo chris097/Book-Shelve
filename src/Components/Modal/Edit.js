@@ -6,21 +6,24 @@ export const EditBook = ({ removeEditBookmodal, book }) => {
     let check, books, id;
     function toEditBook(){
         book.map(res => check = res );
+        console.log(check)
         return check;
     }
+    
    books = toEditBook();
    id = books.id;
+
 const [ edit, setEdit] = useState({
-    title: books.title,
-    author: books.author,
-    publish: books.publish
+    title: [],
+    author: [books.author],
+    publish: [books.publish]
 })
 
 
 const onSubmitHandler = () =>{
     axios.put(`${baseUrl}/${id}`, edit)
     .then((res) => {
-        edit.title = res.data.title
+        console.log(res)
     })
 }
 
