@@ -6,7 +6,7 @@ export const Category = ({ book }) => {
     return(
         <div className="px-10 bg-gray-50 h-16 py-4 flex justify-between fixed w-full mt-20 font-rubik">
             <div className="flex">
-                <div className="text-lg">Categories</div>
+                <div className="text-lg flex">Categories</div>
                 <div className="flex ml-32 w-full">
                     <div className="bg-gray-100 px-10 h-9 pt-1.5 rounded-full text-primaryColor">Fiction</div>
                     <svg className="mx-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

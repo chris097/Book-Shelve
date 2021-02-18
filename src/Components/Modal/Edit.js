@@ -14,16 +14,16 @@ export const EditBook = ({ removeEditBookmodal, book }) => {
    id = books.id;
 
 const [ edit, setEdit] = useState({
-    title: [],
-    author: [books.author],
-    publish: [books.publish]
+    title: books.title
 })
-
 
 const onSubmitHandler = () =>{
     axios.put(`${baseUrl}/${id}`, edit)
     .then((res) => {
-        console.log(res)
+      const result = res.data
+      console.log(result)
+      setEdit(edit)
+
     })
 }
 
