@@ -11440,6 +11440,11 @@
     "slice-ansi" "^4.0.0"
     "string-width" "^4.2.0"
 
+"tailwind-scrollbar@^1.2.3":
+  "integrity" "sha512-eMOwG0gkiUztGSA8bPZD626VeBLknFo5QeJQJNLNYLgMID8oPNpzcy7I6EtMMkqYlmbGxSvM0fwoXneSRoXKfg=="
+  "resolved" "https://registry.npmjs.org/tailwind-scrollbar/-/tailwind-scrollbar-1.2.3.tgz"
+  "version" "1.2.3"
+
 "tailwindcss@npm:@tailwindcss/postcss7-compat@^2.0.2":
   "integrity" "sha512-R43aiSzwlybDMhDld8vkSIKPSLXxbbmotZ+I2GIrX+IzFNy9JAByC7Ncf9A81Dg0JLBWHY5m769lBbBnJCF8cw=="
   "resolved" "https://registry.npmjs.org/@tailwindcss/postcss7-compat/-/postcss7-compat-2.0.3.tgz"

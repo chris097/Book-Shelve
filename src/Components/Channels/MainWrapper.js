@@ -13,7 +13,7 @@ export const MainWrapper = ({ book }) => {
     const [ getBookDetails, setBookDetails ] = useState([])
     const [ data, setData ] = useState([]);
     const [ deleteDetails, setDeleteDetails ] = useState([])
-    const [ editBook, setEditBook ] = useState([])
+    const [ editForm, setEditForm ] = useState([])
 
     function getId (id){
         id = book.map(books => (
@@ -26,12 +26,12 @@ export const MainWrapper = ({ book }) => {
 
     // use remove button x to exit modal
     const removeEditBookmodal = () => {
-        setEditBook('')
+        setEditForm('')
     }
 
     // EventHandler- edit book modal
     const editBookDetails =() => {
-        setEditBook(<EditBook removeEditBookmodal={removeEditBookmodal} book={book} />)
+        setEditForm(<EditBook removeEditBookmodal={removeEditBookmodal} book={book} />)
         setDeleteDetails('')
         setBookDetails('')
 
@@ -51,7 +51,11 @@ export const MainWrapper = ({ book }) => {
         console.log('A book was delete ...')
         setDeleteDetails('')
         axios.delete(`${baseUrl}/${id}`)
-        .then(res => console.log(res.data))
+        .then(res => {
+            window.location.reload(false)
+            console.log(res.data)
+            setData(res.data)
+        })
     }
 
     // Cancel Button decided not continue operation
@@ -81,15 +85,15 @@ export const MainWrapper = ({ book }) => {
 
     return (
         <>
-            <div className="overflow-y-auto h-screen w-screen overflow-x-hidden font-rubik-400">
+            <div className="pb-20 overflow-y- h-screen w-screen overflow-x-hidden font-rubik-400 self-center justify-items-center justify-center scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">
             { getBookDetails }
             { deleteDetails }
-            { editBook }
-                    <div className="mx-72 mt-44 rounded-full flex flex-wrap w-4/5 justify-items-start">
+            { editForm }
+                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start">
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books.id} onClick={() => getBookId(`${books.id}`)}>
-                                <div className="bg-gray-200 w-full rounded-tr-lg rounded-tl-lg">
-                                    <img className="w-full h-52" src={img1} alt=""/>
+                                <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
+                                    <img className="w-screen h-52" src={img1} alt=""/>
                                 </div>
                                 <div className="mt-2 ml-3">
                                     <div className="text-lg font-medium">{books.title}</div>
