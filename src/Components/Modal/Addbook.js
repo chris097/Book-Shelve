@@ -73,7 +73,7 @@ export const Addbook = ({ removeBookmodal }) => {
                             </div>
                             <div className="mt-2">
                                 <label className="block" htmlFor="imageUrl">Image Url</label>
-                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.imageUrl} id="imageUrl" className="input-box" type="text" placeholder="https://www.mybookimageurl.com"/>
+                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.imageUrl} id="imageUrl" className="input-box" type="text" placeholder="Optional"/>
                             </div>
                             <div className="mt-2">
                                 <label className="block" htmlFor="description">Description</label>

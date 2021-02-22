@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const DeleteDetails = ({
-    cancelDetails , removeBookId 
-}) => (
+    export const DeleteDetails = ({ cancelDetails, removeBookId }) => {
+
+    return(
     <>
         <div className="fixed w-screen h-screen bg-gray-900 left-0 top-0 opacity-40 transition ease-in-out delay-1000"></div>
         <div className="self-center justify-center flex font-rubik-400 font-medium">
@@ -15,5 +15,5 @@ export const DeleteDetails = ({
             </div>
         </div>
     </>
-
-)
+    )
+}

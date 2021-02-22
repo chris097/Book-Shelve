@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import img1 from "../../Images/img-1.svg";
 import img2 from "../../Icons/love-icon.svg";
 import img3 from "../../Icons/comment-icon.svg";
 import { BookDetails } from "../Modal/Details";
@@ -14,15 +13,6 @@ export const MainWrapper = ({ book }) => {
     const [ data, setData ] = useState([]);
     const [ deleteDetails, setDeleteDetails ] = useState([])
     const [ editForm, setEditForm ] = useState([])
-
-    function getId (id){
-        id = book.map(books => (
-            books.id
-        ))
-    
-        return id;
-    }
-    const id = getId()
 
     // use remove button x to exit modal
     const removeEditBookmodal = () => {
@@ -47,16 +37,10 @@ export const MainWrapper = ({ book }) => {
         setBookDetails('')
     }
     // Delete- To delete a book from the database
-    const removeBookId = () => {
-        console.log('A book was delete ...')
-        setDeleteDetails('')
-        axios.delete(`${baseUrl}/${id}`)
-        .then(res => {
-            window.location.reload(false)
-            console.log(res.data)
-            setData(res.data)
-        })
-    }
+    const removeBookId = () => (
+        console.log('something was click')
+    )
+
 
     // Cancel Button decided not continue operation
     const cancelDetails = () => {
@@ -73,14 +57,15 @@ export const MainWrapper = ({ book }) => {
             console.log(result);
     })
         
-         return setBookDetails(<BookDetails 
+         setBookDetails(
+             <BookDetails 
                 id={data.id} 
                 title={data.title} 
                 author={data.author}
                 removeBookDetails={removeBookDetails} 
                 deleteDetailsModal={deleteDetailsModal}
-                editBookDetails={editBookDetails}
-            />)
+                editBookDetails={editBookDetails}/>
+            )
     }
 
     return (
@@ -93,7 +78,7 @@ export const MainWrapper = ({ book }) => {
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books.id} onClick={() => getBookId(`${books.id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
-                                    <img className="w-screen h-52" src={img1} alt=""/>
+                                    <img className="w-screen h-52" src={!books.imageUrl ? img2 : books.imageUrl} alt=""/>
                                 </div>
                                 <div className="mt-2 ml-3">
                                     <div className="text-lg font-medium">{books.title}</div>
