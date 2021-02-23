@@ -7,7 +7,7 @@ import { Loading } from './Components/Loading';
 import { Nodata } from './Components/errors/Nodata';
 
 
-export let baseUrl = "http://localhost:3004/books";
+export let baseUrl = "https://lib-shelter.herokuapp.com/api/items";
 
 export default function App() {
     const [ getModal, setGetModal ] = useState('');
@@ -19,7 +19,7 @@ export default function App() {
         axios.get(baseUrl)
         .then(res => {
             const book = res.data;
-            // console.log(book);
+            console.log(book);
             if(book){
                 setTimeout(() => {
                     setWeb(<Banner getBookModal={getBookModal} book={book} />)
