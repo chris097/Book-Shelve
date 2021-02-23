@@ -14,16 +14,17 @@ export const Addbook = ({ removeBookmodal }) => {
         title: [],
         author: [],
         bookUrl: [],
-        publish: [],
         isPublished: [],
         imageUrl: [],
         description: []
     })
     // Post- add a book to the database
     const onSubmitHandler = e => {
+        e.preventDefault()
         axios.post(baseUrl, postData)
         .then(res => {
             const updateDate = res.data;
+            window.location.reload(false)
             console.log(updateDate)
                 setPostData(postData)
         })
@@ -32,6 +33,7 @@ export const Addbook = ({ removeBookmodal }) => {
     }
 
     const onChangeHandler = e => {
+        e.preventDefault()
         const newData = {...postData};
         newData[e.target.id] = e.target.value;
         // console.log(e.target.value)
@@ -64,11 +66,7 @@ export const Addbook = ({ removeBookmodal }) => {
                                 <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.bookUrl} id="bookUrl" className="input-box" type="text" placeholder="https://www.mybook.com" required/>
                             </div>
                             <div className="mt-2">
-                                <label htmlFor="publish">Publish</label>
-                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.publish} id="publish" className="input-box" type="number" placeholder="1995"/>
-                            </div>
-                            <div className="mt-2">
-                                <label className="block" htmlFor="publishName">Publisher</label>
+                                <label className="block" htmlFor="publishName">Published</label>
                                 <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.isPublished} id="isPublished" className="input-box" type="text" placeholder="Publisher Name"/>
                             </div>
                             <div className="mt-2">

@@ -49,8 +49,8 @@ export const MainWrapper = ({ book }) => {
     }
  
     // Get:ID look for a particular book in the database
-    const getBookId = (id) => {
-        axios.get(`${baseUrl}/${id}`)
+    const getBookId = (_id) => {
+        axios.get(`${baseUrl}/${_id}`)
         .then(res => {
             const result = res.data
             setData(result)
@@ -74,11 +74,11 @@ export const MainWrapper = ({ book }) => {
             { getBookDetails }
             { deleteDetails }
             { editForm }
-                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start">
+                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative">
                         { book.map(books => (
-                            <div className="card cursor-pointer" key={books.id} onClick={() => getBookId(`${books.id}`)}>
+                            <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
-                                    <img className="w-screen h-52" src={!books.imageUrl ? img2 : books.imageUrl} alt=""/>
+                                    <img className="w-screen h-52" src={books.imageUrl="" ? img2 : books.imageUrl} alt=""/>
                                 </div>
                                 <div className="mt-2 ml-3">
                                     <div className="text-lg font-medium">{books.title}</div>

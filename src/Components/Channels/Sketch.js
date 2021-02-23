@@ -8,7 +8,7 @@ export const Sketch = () => {
         <div className="px-10 bg-white shadow-sm flex self-stretch h-20 py-4 fixed w-full animate-pulse">
         <div className="text-2xl pt-2 font-lobster text-gray-400">LiberShelter</div>
                 
-                <div className="w-4/5 bg-gray-50 mx-20 rounded-full px-4">
+                <div className="w-4/5 bg-gray-50 mx-20 rounded-full px-4 ">
                     <span><svg className="w-6 inline text-gray-200 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg></span>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Category } from "../Channels/Category";
 
-export const Header = ({ getBookModal, book }) => {
+export const Header = ({ getBookModal, book, getSidebarMobile }) => {
     return(
         <>
             <div className="md:px-10 px-4 bg-white shadow-sm flex h-20 py-4 fixed w-full">
@@ -33,7 +33,7 @@ export const Header = ({ getBookModal, book }) => {
                 </button>
                
             </div>
-            <Category book={book} />
+            <Category book={book} getSidebarMobile={getSidebarMobile} />
         </>
     )
 }

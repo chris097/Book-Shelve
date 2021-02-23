@@ -2,15 +2,18 @@ import React from "react";
 import displayIcon from '../../Icons/display-icon.svg';
 import filterIcon from "../../Icons/filter-icon.svg";
 
-export const Category = ({ book }) => {
+export const Category = ({ book, getSidebarMobile }) => {
+   
     return(
         <div className="px-10 bg-gray-50 h-16 py-4 flex md:justify-between fixed w-full mt-20 font-rubik">
             <div className="flex">
 
                 { /* Mobile view : hambuger */}
+                <div onClick={getSidebarMobile}>
                 <svg className="w-9 md:invisible left-2 absolute text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
+                </div>
         
                 <div className="text-lg flex ml-2 md:ml-0 md:mt-0 mt-1">Categories</div>
                 <div className="flex ml-32 w-full">
