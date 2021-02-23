@@ -3,7 +3,7 @@ import img1  from '../../Images/img-1.svg';
 import loveIcon from '../../Icons/love-icon.svg';
 
 
-export const BookDetails = ({ removeBookDetails, id, author }) => {
+export const BookDetails = ({ removeBookDetails, author, title, published, publisher }) => {
 
 
     return(
@@ -12,7 +12,7 @@ export const BookDetails = ({ removeBookDetails, id, author }) => {
         <div className="self-center justify-center flex font-rubik-400 font-medium">
             <div className="absolute top-1 bg-white shadow-2xl md:w-1/2 mx-2 h-auto z-50 transition-transform m-auto overflow-hidden rounded-md ">
                 <div className="flex justify-between md:px-3 py-2">
-                    <div className="ml-4">{id}</div>
+                    <div className="ml-4">{title}</div>
                     <div onClick={removeBookDetails} className=""><svg className="w-5 mr-3 text-gray-500 hover:text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg></div>
@@ -23,8 +23,8 @@ export const BookDetails = ({ removeBookDetails, id, author }) => {
                         <img className="w-full pr-8 h-70" src={img1} alt="book_image"/>
                         <div className="mt-5 ">
                             <div className="mb-3">Author: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">{author}</span></div>
-                            <div className="mb-3">Published: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">Hannel Ham</span></div>
-                            <div className="mb-3">Publishers: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">Hannel Ham</span></div>
+                            <div className="mb-3">Published: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">{published}</span></div>
+                            <div className="mb-3">Publishers: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">{publisher}</span></div>
                             <div className="mb-3">BookUrl: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">htpps://www.myapp.com</span></div>
                         </div>
                     </div>
