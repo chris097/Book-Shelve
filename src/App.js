@@ -19,7 +19,7 @@ export default function App() {
         axios.get(baseUrl)
         .then(res => {
             const book = res.data;
-            // console.log(book);
+            console.log(book);
             if(book){
                 setTimeout(() => {
                     setWeb(<Banner getBookModal={getBookModal} book={book} />)

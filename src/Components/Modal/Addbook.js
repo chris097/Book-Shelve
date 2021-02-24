@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { baseUrl } from '../../App'
+import { baseUrl } from "../../App";
+
 
 export const WaitPost = () => {
     return(
@@ -14,28 +15,29 @@ export const Addbook = ({ removeBookmodal }) => {
         title: [],
         author: [],
         bookUrl: [],
-        publish: [],
         isPublished: [],
         imageUrl: [],
         description: []
     })
     // Post- add a book to the database
     const onSubmitHandler = e => {
-        axios.post(baseUrl, postData)
-        .then(res => {
-            const updateDate = res.data;
-            console.log(updateDate)
-                setPostData(postData)
-        })
-
-        .catch(err => console.error(`${err.message}`))
+        e.preventDefault()
+       axios.post(baseUrl, postData)
+       .then(res => {
+           window.location.reload(false)
+           const result = res.data
+           setPostData(result)
+       })
+       .catch()
     }
 
     const onChangeHandler = e => {
+        e.preventDefault()
         const newData = {...postData};
         newData[e.target.id] = e.target.value;
-        // console.log(e.target.value)
+        console.log(newData)
         setPostData(newData);
+
     }
 
 
@@ -50,7 +52,7 @@ export const Addbook = ({ removeBookmodal }) => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg></div>
                         </div>
-                        <form action="" className="px-7 font-rubik" onSubmit={onSubmitHandler}>
+                        <form action="" className="px-7 font-rubik" onSubmit={onSubmitHandler ? onSubmitHandler : ''}>
                             <div className="mt-5">
                                 <label className="block" htmlFor="title">Title</label>
                                 <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.title} className="input-box" type="text" id="title" placeholder="Book title" required/>
@@ -61,15 +63,11 @@ export const Addbook = ({ removeBookmodal }) => {
                             </div>
                             <div className="mt-2">
                                 <label className="block" htmlFor="BookUrl">Book Url</label>
-                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.bookUrl} id="bookUrl" className="input-box" type="text" placeholder="https://www.mybook.com" required/>
+                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.bookUrl}  id="bookUrl" className="input-box" type="text" placeholder="https://www.mybook.com" required/>
                             </div>
                             <div className="mt-2">
                                 <label htmlFor="publish">Publish</label>
-                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.publish} id="publish" className="input-box" type="number" placeholder="1995"/>
-                            </div>
-                            <div className="mt-2">
-                                <label className="block" htmlFor="publishName">Publisher</label>
-                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.isPublished} id="isPublished" className="input-box" type="text" placeholder="Publisher Name"/>
+                                <input onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.isPublished}  id="isPublished" className="input-box" type="number" placeholder="1995"/>
                             </div>
                             <div className="mt-2">
                                 <label className="block" htmlFor="imageUrl">Image Url</label>
@@ -77,9 +75,9 @@ export const Addbook = ({ removeBookmodal }) => {
                             </div>
                             <div className="mt-2">
                                 <label className="block" htmlFor="description">Description</label>
-                                <textarea onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.description} id="description" className="w-full border border-gray-200 px-1 h-16 outline-none placeholder-gray-200" placeholder="Write a text"></textarea>
+                                <textarea onBlur={e => onChangeHandler(e)} onChange={e => onChangeHandler(e)} value={postData.description}  id="description" className="w-full border border-gray-200 px-1 h-16 outline-none placeholder-gray-200" placeholder="Write a text"></textarea>
                             </div>
-                            <button className="w-full bg-primaryColor my-2 rounded-sm p-2 text-white hover:bg-blue-700 transition-all delay-200 ease-in-out" type="submit">Add </button>
+                            <button className="w-full bg-primaryColor my-2 rounded-sm p-2 text-white hover:bg-blue-700 transition-all delay-200 ease-in-out" type="submit">Add</button>
                         </form>
                     </div>
                 </div>          
