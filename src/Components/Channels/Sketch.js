@@ -37,7 +37,7 @@ export const Sketch = () => {
                 </div>
             </div>
         </div>
-        <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36 animate-pulse">
+        <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36 animate-pulse md:visible invisible">
             <div className="mt-2 px-10">
                <div className="pt-4 hover:bg-gray-100"><div className="bg-gray-200 w-5/6 h-4 mt-3 ml-3 rounded-full"></div></div>
                <div className="pt-2 hover:bg-gray-100"><div className="bg-gray-200 w-2/3 h-4 ml-3 rounded-full"></div></div>
