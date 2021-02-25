@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MainWrapper } from "../Channels/MainWrapper";
 import { Sidebar } from "../Channels/Sidebar";
-import { MobileSidebar } from "../Channels/sidebarMobile";
+import { MobileSidebar } from "../Channels/SidebarMobile";
 import { Header } from "../Header/Header";
 
 

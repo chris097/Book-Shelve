@@ -5,7 +5,7 @@ import React from "react";
 export const Sketch = () => {
     return(
         <>
-        <div className="px-10 bg-white shadow-sm flex self-stretch h-20 py-4 fixed w-full animate-pulse left-0 z-50">
+        <div className="px-10 bg-white shadow-sm flex self-stretch h-20 py-4 fixed w-full animate-pulse">
         <div className="text-2xl pt-2 font-lobster text-gray-400">LiberShelter</div>
                 
                 <div className="md:w-4/5 bg-gray-50 md:mx-20 rounded-full px-4 md:visible invisible">
@@ -19,25 +19,25 @@ export const Sketch = () => {
                 <div className="bg-white h-4 w-full mt-3 md:rounded-full"></div>
                 </div>
             </div>
-            <div className="px-10 bg-gray-50 h-16 py-3 flex justify-between fixed w-full mt-20">
+            <div className="px-10 bg-gray-50 h-16 py-3 flex md:justify-between fixed w-full mt-20">
             <div className="flex">
                 <div className="text-lg bg-white px-2 rounded-full h-8 w-44">
                 <div className="bg-gray-50 h-4 w-full mt-2 rounded-full"></div>
                 </div>
-                <div className="text-lg bg-white px-2 rounded-full h-8 w-44 ml-24">
+                <div className="text-lg bg-white px-2 rounded-full h-8 md:w-44 w-20 md:ml-24 md:10 invisible md:visible">
                 <div className="bg-gray-50 h-4 w-full mt-2 rounded-full"></div>
                 </div>
             </div>
-            <div className="flex">
-                <div className="text-lg bg-white px-2 rounded-full h-8 w-20 mr-4 mt-1">
+            <div className="flex mr-60 md:mr-0">
+                <div className="text-lg bg-white px-2 rounded-full h-8 md:w-20 md:mr-4 mt-1 invisible md:visible">
                 <div className="bg-gray-50 h-4 w-full mt-2 rounded-full"></div>
                 </div>
-                <div className="bg-white py-2 px-2 text-center rounded-full h-8 w-8 mt-1">
+                <div className="bg-white py-2 px-2 text-center rounded-full h-8 w-8 md:mt-1 mt-0">
                 <div className="bg-gray-200 h-4 w-4 rounded-full"></div>
                 </div>
             </div>
         </div>
-        <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36 animate-pulse">
+        <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36 animate-pulse md:visible invisible">
             <div className="mt-2 px-10">
                <div className="pt-4 hover:bg-gray-100"><div className="bg-gray-200 w-5/6 h-4 mt-3 ml-3 rounded-full"></div></div>
                <div className="pt-2 hover:bg-gray-100"><div className="bg-gray-200 w-2/3 h-4 ml-3 rounded-full"></div></div>
@@ -53,7 +53,7 @@ export const Sketch = () => {
         </div>
     
                 
-                <div className="bg-white shadow-lg h-screen w-64 fixed overflow-y-auto mt-36 animate-pulse md:visible invisible">
+                <div className="md:mx-72 mt-44 md:w-3/4 rounded-full md:flex md:flex-wrap block justify-items-start animate-pulse ">
                     <div className="card">
                         <div className="bg-gray-200 w-full h-52 rounded-tr-lg rounded-tl-lg"></div>
                         <div className="bg-gray-200 w-3/4 h-4 mt-3 ml-3 rounded-full"></div>
