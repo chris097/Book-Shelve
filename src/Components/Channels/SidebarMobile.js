@@ -2,7 +2,7 @@ import React  from "react";
 
 export const MobileSidebar = () => {
     return(
-        <div className="bg-white shadow-lg h-screen w-screen fixed left-0 mt-36 font-rubik">
+        <div className="dark:bg-gray-600 bg-white shadow-lg h-screen w-screen fixed left-0 mt-36 font-rubik">
             <div className="overflow-y-auto h-3/4 scrollbar scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">
                 <div className="mt-2 px-10">
                     A curated list of every book ever written

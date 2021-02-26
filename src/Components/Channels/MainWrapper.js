@@ -70,7 +70,7 @@ export const MainWrapper = ({ book }) => {
 
     return (
         <>
-            <div className="pb-20 overflow-y- h-screen w-screen overflow-x-hidden font-rubik-400 self-center justify-items-center justify-center scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">
+            <div className="dark:bg-gray-800 transition duration-500 pb-20 overflow-y- h-screen w-screen overflow-x-hidden font-rubik-400 self-center justify-items-center justify-center scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">
             { getBookDetails }
             { deleteDetails }
             { editForm }
@@ -78,10 +78,10 @@ export const MainWrapper = ({ book }) => {
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
-                                    <img className="w-screen h-52" src={books.imageUrl="" ? img2 : books.imageUrl} alt=""/>
+                                {books.imageUrl ="" ? <img className="w-screen h-52 src={img2}" alt="books_image" /> : <img className="w-screen h-54" src={books.imageUrl} alt="book_image"/>}
                                 </div>
                                 <div className="mt-2 ml-3">
-                                    <div className="text-lg font-medium">{books.title}</div>
+                                    <div className="text-lg font-medium dark:text-gray-500">{books.title}</div>
                                     <div className="text-sm text-gray-400">{books.author}</div>
                                 </div>
                                 <div className="flex ml-3 mt-2">

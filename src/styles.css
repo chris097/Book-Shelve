@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 .card{
-    @apply bg-white shadow-lg md:w-52 h-80 rounded-lg md:mr-6 mb-5 md:mx-0 mx-4 
+    @apply dark:bg-gray-700 bg-white shadow-lg md:w-52 h-80 rounded-lg md:mr-6 mb-5 md:mx-0 mx-4 
 }
 
 .input-box{
