@@ -10,5 +10,5 @@
 }
 
 .input-box{
-    @apply w-full border border-gray-200 p-1 rounded-sm outline-none placeholder-gray-300
+    @apply w-full border border-gray-200 p-1 rounded-sm outline-none placeholder-gray-300 dark:bg-gray-600 dark:border-gray-500
 }

@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 // import displayIcon from '../../Icons/display-icon.svg';
 import filterIcon from "../../Icons/filter-icon.svg";
 import useDarkMode from "../hooks/useDarkMode";
+import { DarkModeMobile } from "../Modal/OptionModelMob";
 
 export const Category = ({ book, getSidebarMobile }) => {
     const [colortheme, setColorTheme] = useDarkMode()
+    const [ darkModeMobile, setDarkMoodeMobile ] = useState(false);
+    const [ show, setShow ] = useState(true)
+
+    //Display dark mode
+    const displayDarkMode = () => {
+        setColorTheme(colortheme)
+        setDarkMoodeMobile([])
+    }
+
+    const displayDarkModeMobile = () => {
+        setDarkMoodeMobile(!darkModeMobile)
+        setShow(!show)
+    }
    
     return(
         <div className="dark:bg-gray-800 transition duration-500 px-10 bg-gray-50 h-16 py-4 flex md:justify-between fixed w-full mt-20 font-rubik">
@@ -32,7 +46,7 @@ export const Category = ({ book, getSidebarMobile }) => {
                     <span className="ml-2 mt-1.5">Filter</span>
                 </div>
                 <div className="dark:bg-gray-700 bg-white p-3 rounded-full h-9 w-9 invisible right-4 md:visible">
-                <span onClick={() => setColorTheme(colortheme)}>
+                <span onClick={displayDarkMode}>
                 { colortheme === 'dark' ?
                     <div className="text-gray-500 w-7 -mt-2 -ml-1.5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,10 +61,11 @@ export const Category = ({ book, getSidebarMobile }) => {
                 </span>
                 </div>
                 { /* mobile */}
-                <svg className="absolute right-1 mt-1 text-gray-400 hover:text-gray-600 w-7 md:relative md:invisible" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg onClick={displayDarkModeMobile} className="absolute right-1 mt-1 text-gray-400 hover:text-gray-600 w-7 md:relative md:invisible" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </div>
+            {!show ? <DarkModeMobile /> : show }
         </div>
     )
 }
