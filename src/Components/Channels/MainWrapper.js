@@ -74,7 +74,7 @@ export const MainWrapper = ({ book }) => {
             { getBookDetails }
             { deleteDetails }
             { editForm }
-                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative">
+                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative flex flex-wrap">
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
