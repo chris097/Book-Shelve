@@ -10,8 +10,7 @@ export const BookDetails = ({
     description, 
     isPublished,
     bookUrl,
-    deleteDetailsModal, 
-    editBookDetails 
+    imageUrl
 }) => {
 
 
@@ -29,7 +28,7 @@ export const BookDetails = ({
 
                 <div className="md:px-6 mt-2 flex px-3">
                     <div className="flex-1 overflow-x-visible h-auto w-32 flex-nowrap">
-                        <img className="w-full pr-8 h-70" src={img1} alt="book_image"/>
+                        <img className="w-full pr-8 h-70" src={imageUrl} alt="book_image"/>
                         <div className="mt-5 ">
                             <div className="mb-3">Author: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">{author}</span></div>
                             <div className="mb-3">Published: <span className="bg-blue-400 w-auto text-center text-white pb-1.5 py-1 px-2 rounded-full ml-1.5 text-xs">{isPublished}</span></div>

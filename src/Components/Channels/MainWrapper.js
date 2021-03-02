@@ -65,6 +65,7 @@ export const MainWrapper = ({ book }) => {
                 isPublished={data.isPublished}
                 bookUrl={data.bookUrl}
                 description={data.description}
+                imageUrl={data.imageUrl}
                 removeBookDetails={removeBookDetails} 
                 deleteDetailsModal={deleteDetailsModal}
                 editBookDetails={editBookDetails}/>
