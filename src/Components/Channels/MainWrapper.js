@@ -62,6 +62,9 @@ export const MainWrapper = ({ book }) => {
                 id={data.id} 
                 title={data.title} 
                 author={data.author}
+                isPublished={data.isPublished}
+                bookUrl={data.bookUrl}
+                description={data.description}
                 removeBookDetails={removeBookDetails} 
                 deleteDetailsModal={deleteDetailsModal}
                 editBookDetails={editBookDetails}/>
@@ -74,7 +77,7 @@ export const MainWrapper = ({ book }) => {
             { getBookDetails }
             { deleteDetails }
             { editForm }
-                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative flex flex-wrap">
+                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative">
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
