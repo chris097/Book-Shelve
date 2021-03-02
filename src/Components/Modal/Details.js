@@ -38,7 +38,7 @@ export const BookDetails = ({
                         </div>
                     </div>
                     <div className="flex-1">
-                        <div className="font-normal h-72 overflow-y-auto w-full scrollbar scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        <div className="font-normal h-72 overflow-y-auto w-full scrollbar scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600"> 
                             { description }
                         </div>
 
