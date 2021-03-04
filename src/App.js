@@ -36,7 +36,7 @@ export default function App() {
 
         return setWeb;
 
-    },[web])
+    },[])
 
 
     // Onclick to remove addbook modal
