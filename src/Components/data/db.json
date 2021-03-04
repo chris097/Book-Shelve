@@ -3,22 +3,22 @@
     {
       "title": "Frontend developer",
       "author": "Christian Chiemela",
-      "bookUrl": "https://www.biography.com/.image/t_share/MTY2MzU3Njc4ODI0NjI5OTM0/isaac_newton_1689_painting_sir_godfrey_kneller_public_domain_via_wikimedia_commons.jpg",
+      "bookUrl": "https://www.biography.com/.image/t_share/MTY2MzU3Njc4ODI0NjI5OTM0",
       "publish": "6666",
       "isPublished": "uiiio",
       "imageUrl": "https://www.helloworld.com",
-      "description": "yyyy",
-      "_id": 1
+      "description": "yyyyldddddddddddddddddddddddddddddddddddddddddddddddddddddmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+      "id": 1
     },
     {
       "title": "Home Ground",
       "author": "Christian Chiemela",
-      "bookUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.whatyouwilllearn.com%2Fbook%2Femotional-intelligence%2F&psig=AOvVaw3_CCQ35jZ4Nb297RTLeev1&ust=1607061164591000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjKwMKPse0CFQAAAAAdAAAAABAK",
+      "bookUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.whatyouwilllearn.",
       "publish": "7",
       "isPublished": "klop",
-      "imageUrl": "",
+      "imageUrl": "https://www.helloworld.com",
       "description": "jjj",
-      "_id": 2
+      "id": 2
     }
   ],
   "comments": [],

@@ -8,7 +8,7 @@ import { Nodata } from './Components/errors/Nodata';
 // http://localhost:3004/books
 // https://lib-shelter.herokuapp.com/api/items
 
-export let baseUrl = "https://lib-shelter.herokuapp.com/api/items";
+export let baseUrl = "http://localhost:3004/books";
 
 export default function App() {
     const [ getModal, setGetModal ] = useState('');
@@ -26,6 +26,7 @@ export default function App() {
                     setWeb(<Banner getBookModal={getBookModal} book={book} />)
                 }, 1000);
             }
+            // if database is empty it returns no-data-found...
             if(book.length === 0){
                 setNoData(<Nodata />)
                 // console.log('No data found...')
