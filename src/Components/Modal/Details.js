@@ -45,7 +45,7 @@ export const BookDetails = ({
                 <div className="md:px-8 px-3 mt-2">
                     <div className="flex">
                     <div>32 comments</div>
-                    <div><img className="w-6 ml-14"  src={loveIcon} alt=""/></div>
+                    <div><img className="w-6 ml-14 mt-1"  src={loveIcon} alt=""/></div>
                     </div>
                     <div className="flex my-3">
                         <svg className="w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -8,7 +8,7 @@ import { Nodata } from './Components/errors/Nodata';
 // http://localhost:3004/books
 // https://lib-shelter.herokuapp.com/api/items
 
-export let baseUrl = "https://lib-shelter.herokuapp.com/api/items";
+export let baseUrl = "http://localhost:3004/books";
 
 export default function App() {
     const [ getModal, setGetModal ] = useState('');
