@@ -4,8 +4,10 @@ import { Category } from "../Channels/Category";
 export const Header = ({ getBookModal, book, getSidebarMobile }) => {
     const [ search, setSearch ] = useState([])
     const searchData = (e) => {
-        setSearch(e.target.value)
-        console.log(e.target.value)
+        if(setSearch(e.target.value).contains(book)){
+            setSearch(e.target.value)
+            console.log(e.target.value)
+        }
     }
     return(
         <>
