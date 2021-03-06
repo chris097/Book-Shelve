@@ -33,7 +33,7 @@ export const Header = ({ getBookModal, book }) => {
                 </button>
                
             </div>
-            <Category book={book} />
-        </>
+            <Category book={book} />        
+            </>
     )
 }
