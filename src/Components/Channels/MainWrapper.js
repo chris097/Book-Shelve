@@ -88,7 +88,7 @@ export const MainWrapper = ({ book }) => {
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
-                                <img className="w-screen h-52" src={books.imageUrl !== ""||[] ? books.imageUrl : img2} alt="book_image"/>
+                                <img className="w-screen h-52 rounded-tr-sm rounded-tl-sm" src={books.imageUrl !== ""||[] ? books.imageUrl : img2} alt="book_image"/>
                                 </div>
                                 <div className="mt-2 ml-3">
                                     <div className="text-lg font-medium dark:text-gray-500">{books.title}</div>
