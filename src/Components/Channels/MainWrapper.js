@@ -8,6 +8,9 @@ import { DeleteDetails } from "../Modal/Delete";
 import { EditBook } from "../Modal/Edit";
 import { Logging } from "../Loading";
 
+var a= document.querySelector('#root').innerHTML;
+console.log(a)
+
 
 export const MainWrapper = ({ book }) => {
     const [ getBookDetails, setBookDetails ] = useState([])
