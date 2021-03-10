@@ -4,14 +4,17 @@ import img3 from "../../Icons/comment-icon.svg";
 import { BookDetails } from "../Modal/Details";
 import axios from "axios";
 import { baseUrl } from "../../App";
+import { DeleteDetails } from "../Modal/Delete";
 import { EditBook } from "../Modal/Edit";
+import { Logging } from "../Loading";
 
 
 export const MainWrapper = ({ book }) => {
     const [ getBookDetails, setBookDetails ] = useState([])
-    const [ data, setData ] = useState([]);
+    const [ data, setData ] = useState(' ');
     const [ deleteDetails, setDeleteDetails ] = useState([])
     const [ editForm, setEditForm ] = useState([])
+    const [ loading, setLoading] = useState([])
 
     // use remove button x to exit modal
     const removeEditBookmodal = () => {
@@ -31,62 +34,64 @@ export const MainWrapper = ({ book }) => {
         setBookDetails('');
     }
 
-    // const deleteDetailsModal = (e) => {
-    //     setDeleteDetails(<DeleteDetails cancelDetails={cancelDetails} removeBookId={removeBookId} />)
-    //     setBookDetails("")
-    // }
+    const deleteDetailsModal = (e) => {
+        setDeleteDetails(<DeleteDetails cancelDetails={cancelDetails} removeBookId={removeBookId} />)
+        setBookDetails('')
+    }
     // Delete- To delete a book from the database
-    // const removeBookId = () => (
-
-    //     axios.delete(`${baseUrl}/${data.id}`)
-    //     .then(res => {
-    //         console.log(res.data)
-    //         window.location.reload(false)
-    //         })
-        
-    // )
+    const removeBookId = () => (
+        console.log('something was click')
+    )
 
 
     // Cancel Button decided not continue operation
-    // const cancelDetails = () => {
-    //     console.log('something was clicked...')
-    //     setDeleteDetails('')
-    // }
+    const cancelDetails = () => {
+        console.log('something was clicked...')
+        setDeleteDetails('')
+    }
  
     // Get:ID look for a particular book in the database
-    const getBookId = (_id) => {
-        axios.get(`${baseUrl}/${_id}`)
+    const getBookId = async(_id) => {
+        await axios.get(`${baseUrl}/${_id}`)
         .then(res => {
             const result = res.data
             setData(result)
             console.log(result);
     })
-        
-         setBookDetails(
-             <BookDetails 
-                id={data._id} 
-                title={data.title} 
-                author={data.author}
-                removeBookDetails={removeBookDetails} 
-                // deleteDetailsModal={deleteDetailsModal}
-                editBookDetails={editBookDetails}/>
-            )
+        setLoading(<Logging />)
+        setTimeout(() => {
+            setLoading('')
+            setBookDetails(
+                <BookDetails 
+                   _id={data._id} 
+                   title={data.title} 
+                   author={data.author}
+                   isPublished={data.isPublished}
+                   bookUrl={data.bookUrl}
+                   description={data.description}
+                   imageUrl={data.imageUrl}
+                   removeBookDetails={removeBookDetails} 
+                   deleteDetailsModal={deleteDetailsModal}
+                   editBookDetails={editBookDetails}/>
+               )
+        }, 1500);
     }
 
     return (
         <>
-            <div className="pb-20 overflow-y- h-screen w-screen overflow-x-hidden font-rubik-400 self-center justify-items-center justify-center scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">
+            <div className="dark:bg-gray-800 transition duration-500 pb-20 overflow-y- h-screen w-screen overflow-x-hidden font-rubik-400 self-center justify-items-center justify-center scrollbar-track-gray-200 scrollbar-thumb-gray-400 hover:scrollbar-thumb-gray-600">
             { getBookDetails }
+            {loading}
             { deleteDetails }
             { editForm }
-                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start">
+                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative">
                         { book.map(books => (
-                            <div className="card cursor-pointer" key={books._id} onClick={(_id) => getBookId(books._id)}>
+                            <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
-                                    <img className="w-screen h-52" src={!books.imageUrl ? img2: books.imageUrl}alt=""/>
+                                <img className="w-screen h-52 rounded-tr-sm rounded-tl-sm" src={books.imageUrl !== ""||[] ? books.imageUrl : img2} alt="book_image"/>
                                 </div>
                                 <div className="mt-2 ml-3">
-                                    <div className="text-lg font-medium">{books.title}</div>
+                                    <div className="text-lg font-medium dark:text-gray-500">{books.title}</div>
                                     <div className="text-sm text-gray-400">{books.author}</div>
                                 </div>
                                 <div className="flex ml-3 mt-2">
