@@ -6,10 +6,10 @@ import axios from "axios";
 import { baseUrl } from "../../App";
 import { DeleteDetails } from "../Modal/Delete";
 import { EditBook } from "../Modal/Edit";
-import { Logging } from "../Loading";
+// import { Logging } from "../Loading";
 
-var a= document.querySelector('#root').innerHTML;
-console.log(a)
+// var a= document.querySelector('#root').innerHTML;
+// console.log(a)
 
 
 export const MainWrapper = ({ book }) => {
@@ -61,7 +61,7 @@ export const MainWrapper = ({ book }) => {
             setData(result)
             console.log(result);
     })
-        setLoading(<Logging />)
+        // setLoading(<Logging />)
         setTimeout(() => {
             setLoading('')
             setBookDetails(
@@ -87,7 +87,7 @@ export const MainWrapper = ({ book }) => {
             {loading}
             { deleteDetails }
             { editForm }
-                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap w-full self-center justify-items-start md:relative">
+                    <div className="md:mx-72 mt-44 rounded-full md:flex md:flex-wrap self-center justify-items-start md:relative">
                         { book.map(books => (
                             <div className="card cursor-pointer" key={books._id} onClick={() => getBookId(`${books._id}`)}>
                                 <div className="bg-gray-200 md:w-full rounded-tr-lg rounded-tl-lg">
